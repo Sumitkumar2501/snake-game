@@ -144,17 +144,20 @@ function restartGame(){
 
 
 
-addEventListener("keydown",(event)=>{
-    if(event.key == "ArrowUp"){
-        direction="up"
+
+addEventListener("keydown", (event) => {
+
+    if (event.key === "ArrowUp" && direction !== "down") {
+        direction = "up";
     }
-    else if(event.key == "ArrowRight"){
-        direction="right"
+    else if (event.key === "ArrowRight" && direction !== "left") {
+        direction = "right";
     }
-    else if(event.key== "ArrowLeft"){
-        direction="left"
+    else if (event.key === "ArrowLeft" && direction !== "right") {
+        direction = "left";
     }
-    else if(event.key=="ArrowDown"){
-        direction= "down"
+    else if (event.key === "ArrowDown" && direction !== "up") {
+        direction = "down";
     }
+
 })
